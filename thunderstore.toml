@@ -1,0 +1,24 @@
+[config]
+schemaVersion = "0.0.1"
+
+[package]
+namespace = "Testruction"
+name = "Testitute"
+versionNumber = "0.0.8"
+description = "This is a test package. For test people."
+websiteUrl = ""
+containsNsfwContent = false
+
+[build]
+icon = "./package/icon.png"
+readme = "./package/README.md"
+outdir = "./package/build"
+
+[[build.copy]]
+source = "./package/dist"
+target = ""
+
+[publish]
+repository = "https://thunderstore.dev"
+communities = ["test"]
+categories = []

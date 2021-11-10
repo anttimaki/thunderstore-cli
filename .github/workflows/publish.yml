@@ -1,0 +1,19 @@
+name: Test package publishing
+
+on: [push]
+
+jobs:
+  publish:
+    name: Publish package
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '5.0.x'
+      - name: Install dependencies
+        run: dotnet restore
+      - name: publish
+        env:
+          TCLI_AUTH_TOKEN: ${{ secrets.TCLI_AUTH_TOKEN }}
+        run: dotnet run --project ThunderstoreCLI publish

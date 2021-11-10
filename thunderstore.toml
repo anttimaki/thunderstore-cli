@@ -4,7 +4,7 @@ schemaVersion = "0.0.1"
 [package]
 namespace = "Testruction"
 name = "Testitute"
-versionNumber = "0.0.8"
+versionNumber = "0.0.9"
 description = "This is a test package. For test people."
 websiteUrl = ""
 containsNsfwContent = false
